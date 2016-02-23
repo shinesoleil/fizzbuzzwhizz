@@ -28,4 +28,23 @@ describe("rule 3,4", function() {
     });
 });
 
-
+describe("rule 5", function() {
+    it("convert 1 to '-1'", function() {
+        expect(ruleFive(1, [3,5,7])).toBe("-1");
+    });
+    it("convert 3 to '0'", function() {
+        expect(ruleFive(3, [3,5,7])).toBe("0");
+    });
+    it("convert 23 to '0'", function() {
+        expect(ruleFive(23, [3,5,7])).toBe("0");
+    });
+    it("convert 31 to '0'", function() {
+        expect(ruleFive(31, [3,5,7])).toBe("0");
+    });
+    it("convert 33 to '0'", function() {
+        expect(ruleFive(33, [3,5,7])).toBe("0");
+    });
+    it("convert 99 to '-1'", function() {
+        expect(ruleFive(99, [3,5,7])).toBe("-1");
+    });
+});

@@ -10,8 +10,8 @@ function isMultipleOf(number, spetialNumber) {
     return number%spetialNumber == 0;
 }
 
-function ruleFive(number, firstSpetialNumber) {
-    if(isOneDigitOf(number, firstSpetialNumber)) {
+function ruleFive(number, spetialNumbers) {
+    if(isOneDigitOf(number, spetialNumbers[0])) {
         return "0";
     }
     return "-1";
