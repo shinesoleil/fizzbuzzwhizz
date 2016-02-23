@@ -1,6 +1,16 @@
 var array1 = ["0", "1", "2", "01", "02", "12", "012"];
 var array2 = ["Fizz", "Buzz", "Whizz", "FizzBuzz", "FizzWhizz", "BuzzWhizz", "FizzBuzzWhizz"];
 
+function transform(number) {
+    var position = array1.indexOf(number);
+    if(position == -1) {
+        return number;
+    }
+    else {
+        return array2[position];
+    }
+}
+
 function isOneDigitOf(number, spetialNumber) {
     var result = number.toString().indexOf(spetialNumber.toString());
     return result!=-1;
@@ -42,15 +52,6 @@ function game(number, baseNumbers) {
     }
 }
 
-function transform(number) {
-    var position = array1.indexOf(number);
-    if(position == -1) {
-        return number;
-    }
-    else {
-        return array2[position];
-    }
-}
 
 function index() {
     for(var i=1; i<=100; i++) {

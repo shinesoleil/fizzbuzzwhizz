@@ -48,3 +48,27 @@ describe("rule 5", function() {
         expect(ruleFive(99, [3,5,7])).toBe("-1");
     });
 });
+
+describe("transform from numbers to words", function() {
+    it("convert '0' to 'Fizz'", function() {
+        expect(transform("0")).toBe("Fizz");
+    });
+    it("convert '1' to 'Buzz'", function() {
+        expect(transform('1')).toBe("Buzz");
+    });
+    it("convert '2' to 'Whizz'", function() {
+        expect(transform('2')).toBe("Whizz");
+    });
+    it("convert '01' to 'FizzBuzz'", function() {
+        expect(transform('01')).toBe("FizzBuzz");
+    });
+    it("convert '02' to 'FizzWhizz'", function() {
+        expect(transform('02')).toBe("FizzWhizz");
+    });
+    it("convert '12' to 'BuzzWhizz'", function() {
+        expect(transform('12')).toBe("BuzzWhizz");
+    });
+    it("convert '012' to 'FizzBuzzWhizz'", function() {
+        expect(transform('012')).toBe("FizzBuzzWhizz");
+    });
+});
