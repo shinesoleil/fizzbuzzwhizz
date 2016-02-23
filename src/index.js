@@ -3,6 +3,10 @@ function isOneDigitOf(number, spetialNumber) {
     return result!=-1;
 }
 
+function isMultipleOf(number, spetialNumber) {
+    return number%spetialNumber == 0;
+}
+
 function ruleFive(number, spetialNumbers) {
     for(i=0; i<spetialNumbers.length; i++) {
         if(isOneDigitOf(number, spetialNumbers[i])) {
@@ -11,3 +15,17 @@ function ruleFive(number, spetialNumbers) {
     }
     return -1;
 }
+
+function ruleThree(number, spetialNumbers) {
+    var result = "";
+    for(i=0; i<spetialNumbers.length; i++) {
+        if(isMultipleOf(number, spetialNumbers[i])){
+            result += i;
+        }
+    }
+    return result;
+}
+
+
+
+
