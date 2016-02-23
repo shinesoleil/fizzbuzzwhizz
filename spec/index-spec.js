@@ -72,3 +72,34 @@ describe("transform from numbers to words", function() {
         expect(transform('012')).toBe("FizzBuzzWhizz");
     });
 });
+
+describe("game test using [3,5,7] as spetial numbers", function() {
+    it("convert 1 to 1", function() {
+        expect(game(1, [3,5,7])).toBe(1);
+    });
+    it("convert 3 to '0'", function() {
+        expect(game(3, [3,5,7])).toBe('0');
+    });
+    it("convert 5 to '1'", function() {
+        expect(game(5, [3,5,7])).toBe('1');
+    });
+    it("convert 7 to '2", function() {
+        expect(game(7, [3,5,7])).toBe('2');
+    });
+    it("convert 15 to '01", function() {
+        expect(game(15, [3,5,7])).toBe('01');
+    });
+    it("convert 21 to '02", function() {
+        expect(game(21, [3,5,7])).toBe('02');
+    });
+    it("convert 35 to '0", function() {
+        expect(game(35, [3,5,7])).toBe('0');
+    });
+    it("convert 70 to '12", function() {
+        expect(game(70, [3,5,7])).toBe('12');
+    });
+    it("convert 94 to 94", function() {
+        expect(game(94, [3,5,7])).toBe(94);
+    });
+
+});

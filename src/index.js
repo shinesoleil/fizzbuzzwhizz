@@ -52,10 +52,9 @@ function game(number, baseNumbers) {
     }
 }
 
-
-function index() {
+function index(inputArray) {
     for(var i=1; i<=100; i++) {
-        console.log(transform(game(i, [3,5,7])));
+        console.log(transform(game(i, inputArray)));
     }
 }
 
